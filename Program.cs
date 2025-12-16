@@ -2,7 +2,7 @@ using DI.DTOs;
 using DI.Interfaces;
 
 var builder = WebApplication.CreateBuilder();
-builder.Services.AddTransient<ITimeService, DevTimeTimeService>();
+builder.Services.AddTransient<ITimeService, ProdTimeService>();
 
 var app = builder.Build();
 var timeService = app.Services.GetService<ITimeService>();
